@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link  rel="stylesheet" href = "./styles.css"></link>
+</head>
+<body>
+    <h1> TODO List</h1>
+    <form action = "/todo.js" method = "post" class = "form-container"/>
+        <input class = "text-box " type ="text" name = "new-todo"/>
+        <input class = "submit" type = "submit " value = "Add new todo"/>
+
+
+        {{#todo}}
+       
+            {{#complete}}<span class = "checkbox complete" ><input  type="checkbox" name="lastname" checked ><strike>{{listItem}}</strike></input></span>{{/complete}}
+
+        {{^complete}}<span class = "checkbox" ><input  type="checkbox" name="lastname">{{listItem}}</input></span>{{/complete}}
+  
+
+
+        {{/todo}}
+    </form>
+</body>
+</html>
